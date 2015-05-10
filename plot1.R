@@ -8,4 +8,7 @@ library(dplyr)
 
 subsetted <- filter(mydata, DateTime >= as.Date("2007-02-01 00:00:00"), DateTime < as.Date("2007-02-03 00:00:00"))
 
-hist(Global_active_power$Global_intensity, xlab="Global Active Power (kilowatts)", ylab="Frequency", main="Global Active Power", col="red")
+
+hist(mydata$Global_active_power, xlab="Global Active Power (kilowatts)", ylab="Frequency", main="Global Active Power", col="red", yaxt="n", xaxt="n", cex.lab=0.8)
+     axis(2, xaxp=c(0, 1200, 200), cex.axis=.9)     
+     axis(1, xaxp=c(0, 6, 3), cex.axis=.9)
